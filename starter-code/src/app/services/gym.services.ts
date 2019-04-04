@@ -4,14 +4,16 @@ import { userInfo } from 'os';
 @Injectable()
 export class GymServices {
     logMessages:Array<{person: String,message: String,createdAt:Date}>;    
-    constructor() { }
+    constructor() { 
+        this.logMessages = []
+    }
 
-    addAccessItem(person,message) {
+    addAccessItem(person: String,message: String) {
         var createdAt=new Date()
         //var createdAt=date.getDate()
-
         this.logMessages.push({person, message, createdAt})
-        return
+        //console.log(this.logMessages)
+        return this.logMessages
     }
 
     getAccessLog() {

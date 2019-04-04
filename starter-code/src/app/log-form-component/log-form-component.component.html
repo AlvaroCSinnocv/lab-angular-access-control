@@ -1,0 +1,16 @@
+<p>
+  HOLI MANOLI
+</p>
+<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+  <label for="person">
+    Insertar aqui persona
+    <input type="text" name="person" [(ngModel)]="person">
+  </label> 
+  <label for="message"> 
+    Insertar aqui mensaje
+    <input type="text" name="message" [(ngModel)]="message">
+  </label>
+  <button (click)="addAccessItem" type="submit">
+    Submit
+  </button>
+</form>
